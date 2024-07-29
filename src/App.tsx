@@ -1,14 +1,14 @@
-import { Provider } from 'react-redux'
 import './App.css'
-import { Main } from './components/Main'
-import { store } from './redux/store'
+import { PokeCards } from './components/pokemons-data/Cards';
 
 function App() {
   return (
-   <Provider store={store}>
-     <Main />
-   </Provider>
+   <div>
+    <h1>Some pokemons name</h1>
+    <PokeCards />
+   </div>
   )
 }
 
-export default App
+
+export default App;
