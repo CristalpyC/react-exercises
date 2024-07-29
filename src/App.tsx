@@ -1,14 +1,20 @@
 import './App.css'
-import { PokeCards } from './components/pokemons-data/Cards';
+import { Counter } from './components/render-props/Counter';
 
 function App() {
   return (
-   <div>
-    <h1>Some pokemons name</h1>
-    <PokeCards />
-   </div>
-  )
+   <>
+    <h1 className='mb-4'>Counter: Render props</h1>
+    <Counter>
+      {(sum, sumNum) => (
+       <div>
+         <p>Num: {sum}</p>
+         <button className='text-black p-2 mt-4 bg-blue-100 hover:bg-blue-300' onClick={sumNum}>+ 2</button>
+       </div>
+      )}
+    </Counter>
+   </>
+  );
 }
-
 
 export default App;
